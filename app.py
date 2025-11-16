@@ -57,7 +57,9 @@ menu = st.sidebar.selectbox(
 if menu == "Dataset Overview":
     st.header("Dataset Overview")
     st.dataframe(data.head())
+    st.header("Summary")
     st.dataframe(data.describe())
+    st.header("Stress_Level")
     st.bar_chart(data["stress_level"].value_counts())
 
 elif menu == "Visualizations":
